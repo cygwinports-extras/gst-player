@@ -1,0 +1,14 @@
+DESCRIPTION="Basic GTK+ GStreamer player"
+HOMEPAGE="http://code.google.com/p/gst-player/"
+SRC_URI="http://gst-player.googlecode.com/files/${P}.tar.bz2"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake
+}
+
+src_install() {
+	cd ${B}
+	dobin ${PN}.exe
+}
